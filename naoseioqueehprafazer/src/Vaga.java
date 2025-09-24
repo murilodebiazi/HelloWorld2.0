@@ -41,4 +41,14 @@ public class Vaga {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Vaga{" +
+                "andar=" + andar +
+                ", pessoas=" + pessoas +
+                ", coberta=" + coberta +
+                ", placa='" + placa + '\'' +
+                '}';
+    }
 }
