@@ -14,38 +14,42 @@ public class Estacionamento {
     }
 
     public Vaga Estacionar(String placa){
-        for(int i=0; i < this.vagas.length; i++) {
-            for (int j = 0; j < this.vagas[i].length; j++) {
-                if (this.vagas[i][j] == null) {
+        for(int i=0; i < this.vagas.length; i++)
+            for (int j = 0; j < this.vagas[i].length; j++)
+                if (this.vagas[i][j] == null) 
                     if (this.vagas[i][j].getPlaca() == null) {
                         vagas[i][j].setPlaca(placa);
                         return vagas[i][j];
                     }
-                }
-            }
-        }
         return null;
     }
 
     public void listarVagas(){
         System.out.println("Vagas:");
-        for(int i=0; i < this.vagas.length; i++) {
-            for (int j = 0; j < this.vagas[i].length; j++) {
+        for(int i=0; i < this.vagas.length; i++)
+            for (int j = 0; j < this.vagas[i].length; j++)
                 System.out.println(this.vagas[i][j]);
-            }
-        }
     }
 
-    public boolean liberarVaga(String placa){
-        for(int i=0; i < this.vagas.length; i++) {
-            for (int j = 0; j < this.vagas[i].length; j++) {
-                if (this.vagas[i][j].getPlaca().equals(placa)) {
-                    this.vagas[i][j] = null;
-                    return true;
-                }
-            }
-        }
-        return false;
+    public liberarVaga(String placa){
+        for(int i=0; i < this.vagas.length; i++)
+            for (int j = 0; j < this.vagas[i].length; j++)
+                if (this.vagas[i][j] == null)
+                    if (this.vagas[i][j].getPlaca().equals(placa) {
+                        vagas[i][j].setPlaca(placa);
+                        return true;
+                    }
+        return null;
+    }
+
+    public int vagasVazias(){
+        int vazias = 0;
+        for(int i=0; i < this.vagas.length; i++)
+            for (int j = 0; j < this.vagas[i].length; j++)
+                if (this.vagas[i][j] == null)
+                    if (this.vagas[i][j].getPlaca() == null)
+                      vazias++;
+        return vazias;
     }
 }
 
