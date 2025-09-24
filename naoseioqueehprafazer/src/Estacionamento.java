@@ -16,7 +16,7 @@ public class Estacionamento {
     public Vaga Estacionar(String placa){
         for(int i=0; i < this.vagas.length; i++)
             for (int j = 0; j < this.vagas[i].length; j++)
-                if (this.vagas[i][j] == null) 
+                if (this.vagas[i][j] != null)
                     if (this.vagas[i][j].getPlaca() == null) {
                         vagas[i][j].setPlaca(placa);
                         return vagas[i][j];
@@ -34,7 +34,7 @@ public class Estacionamento {
     public liberarVaga(String placa){
         for(int i=0; i < this.vagas.length; i++)
             for (int j = 0; j < this.vagas[i].length; j++)
-                if (this.vagas[i][j] == null)
+                if (this.vagas[i][j] != null)
                     if (this.vagas[i][j].getPlaca().equals(placa) {
                         vagas[i][j].setPlaca(placa);
                         return true;
@@ -46,7 +46,7 @@ public class Estacionamento {
         int vazias = 0;
         for(int i=0; i < this.vagas.length; i++)
             for (int j = 0; j < this.vagas[i].length; j++)
-                if (this.vagas[i][j] == null)
+                if (this.vagas[i][j] != null)
                     if (this.vagas[i][j].getPlaca() == null)
                       vazias++;
         return vazias;
