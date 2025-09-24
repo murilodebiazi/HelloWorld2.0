@@ -51,5 +51,15 @@ public class Estacionamento {
                       vazias++;
         return vazias;
     }
+
+    public int vagasCobertasVazias(){
+        int vazias = 0;
+        for(int i=0; i < this.vagas.length; i++)
+            for (int j = 0; j < this.vagas[i].length; j++)
+                if (this.vagas[i][j] != null)
+                    if (this.vagas[i][j].getPlaca() == null && this.vagas[i][j].isCoberta() == true)
+                        vazias++;
+        return vazias;
+    }
 }
 

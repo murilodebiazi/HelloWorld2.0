@@ -26,7 +26,7 @@ public class Vaga {
         this.pessoas = pessoas;
     }
 
-    public boolean getCoberta() {
+    public boolean isCoberta() {
         return coberta;
     }
 
