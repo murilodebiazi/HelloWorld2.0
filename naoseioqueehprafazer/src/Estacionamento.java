@@ -57,7 +57,7 @@ public class Estacionamento {
         for(int i=0; i < this.vagas.length; i++)
             for (int j = 0; j < this.vagas[i].length; j++)
                 if (this.vagas[i][j] != null)
-                    if (this.vagas[i][j].getPlaca() == null && this.vagas[i][j].isCoberta() == true)
+                    if (this.vagas[i][j].getPlaca() == null && !this.vagas[i][j].isCoberta())
                         vazias++;
         return vazias;
     }
