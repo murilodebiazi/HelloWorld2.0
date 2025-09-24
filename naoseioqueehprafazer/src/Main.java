@@ -12,7 +12,8 @@ public class Main {
         Vaga[][] vagas = new Vaga[xVaga][yVaga];
         for(int i = 0; i < vagas.length; i++){
             for(int j = 0; j < vagas.length[i].length; j++){
-
+                Vaga vaga = new Vaga(1,0,true)
+                Vaga[i][j] = vaga;
             }
         }
 
